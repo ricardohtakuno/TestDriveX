@@ -67,7 +67,7 @@ namespace TestDrive.Views
 
         private void listViewVeiculos_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            var veiculo = (Veiculo)e.item;
+            var veiculo = (Veiculo)e.Item;
 
             Navigation.PushAsync(new DetalheView(veiculo));
         }

@@ -53,7 +53,7 @@ namespace TestDrive.Views
             {
                 temFreioABS = value;
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(PrecoFormatado));
+                OnPropertyChanged(nameof(PrecoTotalFormatado));
             }
         }
 
@@ -81,7 +81,7 @@ namespace TestDrive.Views
             }
             set
             {
-                temMP3Player;
+                temMP3Player = value;
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(PrecoTotalFormatado));
             }
@@ -92,9 +92,9 @@ namespace TestDrive.Views
             get
             {
                 return Veiculo.preco
-                    +(TemFreioABS ? VALOR_FREIO_ABS : 0)
-                    +(TemArCondicionado ? VALOR_AR_CONDICIONADO : 0)
-                    +(TemMP3Player ? VALOR_MP3_PLAYER : 0)
+                    + (TemFreioABS ? VALOR_FREIO_ABS : 0)
+                    + (TemArCondicionado ? VALOR_AR_CONDICIONADO : 0)
+                    + (TemMP3Player ? VALOR_MP3_PLAYER : 0);
             }
         }
 
@@ -114,7 +114,7 @@ namespace TestDrive.Views
 
         private void botaoProximo_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new AgendamentoView(this.Veiculo));
+            Navigation.PushAsync(new AgendamentView(this.Veiculo));
         }
 	}
 }

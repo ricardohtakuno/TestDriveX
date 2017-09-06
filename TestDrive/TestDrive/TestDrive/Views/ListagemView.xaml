@@ -6,7 +6,7 @@
              x:Class="TestDrive.Views.ListagemView">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="ListViewVeiculos" ItemsSource="{Binding Veiculos}" ItemTapped="ListViewVeiculos_ItemTapped">
+            <ListView x:Name="ListViewVeiculos" ItemsSource="{Binding Veiculos}" ItemTapped="listViewVeiculos_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

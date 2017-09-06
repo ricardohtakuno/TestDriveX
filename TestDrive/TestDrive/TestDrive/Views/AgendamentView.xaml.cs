@@ -20,7 +20,14 @@ namespace TestDrive.Views
         public TimeSpan HoraAgendamento { get; set; }
 		public AgendamentView (Veiculo veiculo)
 		{
+            this.Veiculo = veiculo;
 			InitializeComponent ();
+            this.BindingContext = this;
 		}
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Salvar Agendamento", "Nome: " + Nome, "Ok");
+        }
 	}
 }
